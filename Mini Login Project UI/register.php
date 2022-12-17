@@ -1,6 +1,6 @@
 <?php include "header.php" ?>
 <?php include "left_content.php"; ?>
-<div class="col-8">
+<div class="col-12 col-md-8">
     <div class="card">
         <div class="card-body">
             <form action="">
