@@ -1,3 +1,4 @@
+<?php session_start(); ?> 
 <?php include "header.php" ?>
 <?php include "left_content.php"; ?>
 <div class="col-12 col-md-8">
@@ -71,7 +72,7 @@ function checkStrongPassword($password) {
 
 }
 
-checkStrongPassword("Admin123@3");
+// checkStrongPassword("Admin123@3");
 
 if(isset($_POST['register'])) {
     $name = $_POST["name"];

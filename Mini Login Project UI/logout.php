@@ -6,3 +6,9 @@
     </div>
 </div>
 <?php include "footer.php"; ?>
+
+<?php
+session_start();
+session_destroy();
+
+?>
