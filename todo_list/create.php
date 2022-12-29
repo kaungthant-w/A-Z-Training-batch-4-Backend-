@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="mt-5 text-center">
-    <h1 class="h3">Todo List</h1>
+    <h1 class="h3">Todo List <a href="read.php" class="badge bg-info text-decoration-none">View</a></h1>
     <form action="" method="post">
         <div class=" form-group mt-3">
             <label for="name" class=" form-label">Your Tasks</label>
