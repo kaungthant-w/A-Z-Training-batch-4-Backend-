@@ -19,16 +19,22 @@
 
     <?php
         require_once ("db_connection.php");
-
+        
         if(isset($_POST['addBtn'])) {
-            
+
             $taskName = $_POST['taskName'];
-            $sql = "INSERT INTO work(name)VALUES('$taskName')";
-            if(mysqli_query($conn, $sql)) {
-                echo "Insert Success...";
-            } else {
-                echo "Query Fail...";
+
+            if($taskName == null || $taskName =="") {
+                echo "<div class='text-danger'>Task name is required...</div>";
+            } else{
+                $sql = "INSERT INTO work(name)VALUES('$taskName')";
+                if(mysqli_query($conn, $sql)) {
+                    echo "<div class='text-success'>Insert Success...</div>";
+                } else {
+                    echo "Query Fail...";
+                }
             }
+              
         }
 
     ?>
