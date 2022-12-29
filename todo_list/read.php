@@ -35,7 +35,7 @@
                         <td>{$row['name']}</td>
                         <td>$time</td>
                         <th>
-                            <a class='btn btn-outline-primary' href='#'>Update</a> 
+                            <a class='btn btn-outline-primary' href='update.php?id={$row['id']}'>Update</a> 
                             <a class='btn btn-outline-danger'  href='delete.php?id={$row['id']}'>Delete</a>
                         </th>
                     </tr>
