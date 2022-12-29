@@ -10,7 +10,7 @@
 <body class="mt-5 text-center">
     <h1 class="h3">Task List <a href="create.php" class="badge bg-primary text-decoration-none">Create</a></h1>
     
-    <table class="table m-auto mt-5 w-50">
+    <table class="table table-striped m-auto mt-5 w-50">
         <thead>
             <tr>
                 <th>ID</th>
@@ -28,11 +28,12 @@
                 $totalRow = mysqli_num_rows($query);
 
                 while($row = mysqli_fetch_assoc($query)) {
+                    $time = date('g:i a',strtotime($row['created_at']));
                     echo "
                     <tr>
                         <td>{$row['id']}</td>
-                        <td>Code Lab</td>
-                        <td>1.2.2022</td>
+                        <td>{$row['name']}</td>
+                        <td>$time</td>
                         <th>
                             <a class='btn btn-outline-primary' href='#'>Update</a> 
                             <a class='btn btn-outline-danger'  href='#'>Delete</a>
