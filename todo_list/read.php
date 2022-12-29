@@ -28,7 +28,7 @@
                 $totalRow = mysqli_num_rows($query);
 
                 while($row = mysqli_fetch_assoc($query)) {
-                    $time = date('g:i a',strtotime($row['created_at']));
+                    $time = date('d-m-Y (g:i a)',strtotime($row['created_at']));
                     echo "
                     <tr>
                         <td>{$row['id']}</td>
@@ -36,7 +36,7 @@
                         <td>$time</td>
                         <th>
                             <a class='btn btn-outline-primary' href='#'>Update</a> 
-                            <a class='btn btn-outline-danger'  href='#'>Delete</a>
+                            <a class='btn btn-outline-danger'  href='delete.php?id={$row['id']}'>Delete</a>
                         </th>
                     </tr>
                     ";

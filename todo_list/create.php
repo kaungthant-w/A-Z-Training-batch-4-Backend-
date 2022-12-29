@@ -29,7 +29,7 @@
             } else{
                 $sql = "INSERT INTO work(name)VALUES('$taskName')";
                 if(mysqli_query($conn, $sql)) {
-                    echo "<div class='text-success'>Insert Success...</div>";
+                    header("location:read.php");
                 } else {
                     echo "Query Fail...";
                 }
