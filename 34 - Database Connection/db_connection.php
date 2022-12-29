@@ -14,7 +14,7 @@
         if($connection) {
             echo "<h1>database connect success!</h1>";
         } else {
-            die();
+            die("Connection fail...". mysqli_connect_error());
         }
     ?>
 </body>
